@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>1 - Variáveis, constantes, entrada e saída</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/portugol-studio-dark.css">
+
+		<!-- Custom -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+		<link rel="manifest" href="images/favicon/site.webmanifest">
+		<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#2980B9">
+		<meta name="msapplication-TileColor" content="#2980B9">
+		<meta name="theme-color" content="#2980B9">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Lógica de Programação</h1>
+					<h2>Variáveis, constantes, entrada e saída</h2>
+					<p>Prof. Marco Antonio Andrade</p>
+				</section>
+				<section class="left">
+					<h2>Sumário</h2>
+					<ul>
+						<li>Saída de dados</li>
+						<li>Variáveis</li>
+						<li>Constantes</li>
+						<li>Entrada de dados</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Saída de dados</h2>
+					<pre><code class="hlsj portugol" data-trim contenteditable>
+	escreva("Olá mundo")
+
+	escreva("Olá mundo\n")
+	escreva("Turma ADS 2018")							
+					</code></pre>
+					<div class="alert-yellow">O <b>\n</b> quebra a linha</div>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Variável
+						Um variável é um espaço reservado na memória do computador para que possamos armazenar dados.
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Variáveis (tipos)
+						* Caracter: armazena somente 1 caracter.  
+							* Ex.: 'a', 'A', '1', '%', ' '.
+
+						* Inteiro: armazena números inteiros.<!-- .element: class="fragment" data-fragment-index="1" -->
+							* Ex.: 12, 0, 89, -12<!-- .element: class="fragment" data-fragment-index="1" -->
+
+						* Real: armazena números reais.<!-- .element: class="fragment" data-fragment-index="2" -->
+							* Ex.:  12.45, 10.0, 0.0, -122.44<!-- .element: class="fragment" data-fragment-index="2" -->
+
+						* Lógico: armazena valores booleanos (verdadeiro/falso)<!-- .element: class="fragment" data-fragment-index="3" -->
+
+						* Cadeia: armazena um conjunto de caracteres.<!-- .element: class="fragment" data-fragment-index="4" -->
+							* Ex.: "Maria da Silva", "Rua das Flores nº 10"<!-- .element: class="fragment" data-fragment-index="4" -->
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Regras para nomeação de uma variável
+						* A é diferente de a (case sensitive)
+						* Não utilizar caracteres especiais (%, $, á, é)<!-- .element: class="fragment" data-fragment-index="2" -->
+						* Não iniciar com números<!-- .element: class="fragment" data-fragment-index="3" -->
+						* [a-z][A-Z][0-9][ _ ]<!-- .element: class="fragment" data-fragment-index="4" -->
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Crie uma variável para:
+						* Armazenar o valor de um produto.
+						* Armazenar a quantidade disponível de um produto.
+						* Armazenar a quantidade de carros de uma empresa.
+						* Armazenar o nome da mãe do aluno.
+						* Armazenar o número de uma casa.
+						* Armazenar se um aluno é maior de 18 anos.
+						* Armazenar uma letra do alfabeto latino.
+						* Armazenar o percentual concedido de desconto na compra de um produto.
+					</textarea>
+				</section>
+				<section>
+					<h2>Declaração de variáveis</h2>
+					<pre><code class="hljs portugol" data-trim contenteditable>
+	caracter sexo
+	inteiro idade
+	real salario
+	cadeia nome
+	logico pagou							
+					</code></pre>
+				</section>
+				<section>
+					<h2>Atribuição de valores na declaração</h2>
+					<pre><code class="hljs portugol" data-trim contenteditable>
+	caracter sexo = 'F'
+	inteiro idade = 12
+	real salario = 1200.99
+	cadeia nome = "Maria da Silva"
+	logico pagou = verdadeiro							
+					</code></pre>
+				</section>
+				<section>
+					<h2>Atribuição durante a execução do programa</h2>
+					<pre><code class="hljs portugol" data-trim contenteditable>
+	real salario
+	salario = 1200.50
+	escreva(salario)
+	salario = 1230.50
+	escreva(salario)							
+					</code></pre>
+				</section>
+				<section>
+					<h2>Constantes</h2>
+					<pre><code class="hljs portugol" data-trim contenteditable>
+	const real pi = 3.1415
+	const real gravidade = 9.78							
+					</code></pre>
+					<div class="alert-yellow fragment fade-up">O valor atribuído a constante não muda durante a execução do programa.</div>
+				</section>
+				<section>
+					<h2>Entrada de dados</h2>
+					<div class="alert-blue">A variável é declarada sem nenhum valor atribuído</div>
+					<pre><code class="hljs portugol" data-trim contenteditable>
+	real salario
+	inteiro idade
+					</code></pre>
+					<div class="alert-blue fragment fade-up">Através da leitura do console, ou seja, do que o usuário informa, é atribuído um valor a variável</div>
+					<pre class="fragment fade-up"><code class="hljs portugol" data-trim contenteditable>
+	leia(salario)
+	leia(idade)							
+					</code></pre>
+				</section>																						
+				<section data-markdown>
+					<textarea data-template>
+						## Exercícios
+						* Crie um algoritmo que leia o nome, a idade e o sexo de um aluno e imprima esses dados.
+						* Crie um algoritmo que leia o nome e o salário de um funcionário e imprima esses dados.
+						* Crie um algoritmo que leia o nome do inquilino, se ele pagou a mensalidade e imprima esses dados.
+					</textarea>
+				</section>						
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			function getParameterByName(name, url) {
+				if (!url) url = window.location.href;
+				name = name.replace(/[\[\]]/g, '\\$&');
+				var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+				results = regex.exec(url);
+				if (!results) return null;
+				if (!results[2]) return '';
+				return decodeURIComponent(results[2].replace(/\+/g, ' '));
+			}
+			var role = getParameterByName('role');
+			role = role === 'master' ? role : 'client';
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: false, // centraliza os slides
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				slideNumber: false,
+				width: "100%",
+				height: "100%",
+				margin: 0.1,
+				minScale: 1,
+				maxScale: 1,
+				/*
+				multiplex: {
+					secret: null,
+					id: null,
+					url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh'
+				},*/
+				dependencies: [
+					{ src: 'lib/js/socket.io.min.js', async: true },
+          			{ src: 'plugin/multiplex/' + role + '.js', async: true },
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
